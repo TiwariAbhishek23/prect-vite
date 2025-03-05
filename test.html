@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input Playground</title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="https://unpkg.com/lexical@0.3.0"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script src="https://unpkg.com/slate@latest"></script>
+    <script src="https://unpkg.com/@udecode/plate@latest"></script>
+    <script>
+        tinymce.init({ selector: '#tinymce-editor' });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .editor-container {
+            border: 2px solid #ccc;
+            padding: 15px;
+            width: 100%;
+            max-width: 600px;
+            min-height: 150px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        div {
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 600px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        b, i, u {
+            display: inline-block;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: white;
+            height: 200px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Quill Editor</h2>
+    <div id="editor" class="editor-container"></div>
+    <script>
+        var quill = new Quill('#editor', { theme: 'snow' });
+    </script>
+    
+    <h2>Lexical Editor</h2>
+    <div id="lexical-editor" class="editor-container" contenteditable="true"></div>
+
+    <h2>TinyMCE Editor</h2>
+    <textarea id="tinymce-editor" contenteditable="true"></textarea>
+
+    <h2>Slate.js Editor (Placeholder)</h2>
+    <div id="slate-editor" class="editor-container" contenteditable="true"></div>
+
+    <h2>Plate.js Editor (Placeholder)</h2>
+    <div id="plate-editor" class="editor-container" contenteditable="true"></div>
+
+    <h2>Text Inputs</h2>
+    <div>
+        <label>Input Box:</label>
+        <input type="text" id="input" placeholder="Enter text here">
+    </div>
+    <div>
+        <label>Textarea:</label>
+        <textarea id="textarea" rows="5" cols="20"></textarea>
+    </div>
+    <h2>Editable Div</h2>
+    <div contenteditable="true" class="editor-container">
+    </div>
+    
+    <h2>Styled Text Inputs</h2>
+    <div>
+        <label>Bold:</label>
+        <b contenteditable="true"></b>
+    </div>
+
+    <div>
+        <label>Italic:</label>
+        <i contenteditable="true"></i>
+    </div>
+    <div>
+        <label>Underlined:</label>
+        <u contenteditable="true"></u>
+    </div>
+    <h2>Iframe for Testing Text Writing and Expansion</h2>
+    <div>
+        <label>Test in Iframe:</label>
+        <iframe srcdoc="<html><body contenteditable='true' style='border:1px solid #ccc; padding:10px;'></body></html>" width="400" height="200"></iframe>
+    </div>
+</body>
+</html>

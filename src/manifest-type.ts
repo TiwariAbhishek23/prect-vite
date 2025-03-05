@@ -179,6 +179,11 @@ export interface ManifestType {
       }
     | undefined;
   permissions?: chrome.runtime.ManifestPermissions[] | string[] | undefined;
+  side_panel?:
+    | {
+        default_path: string;
+      }
+    | undefined;
   platforms?:
     | {
         nacl_arch?: string | undefined;

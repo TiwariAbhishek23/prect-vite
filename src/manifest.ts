@@ -8,10 +8,6 @@ const manifest: ManifestType = {
   description: packageJson.description,
   options_page: 'src/options/index.html',
   background: { service_worker: 'src/background/index.js' },
-  action: {
-    default_popup: 'src/popup/index.html',
-    default_icon: 'icon-34.png',
-  },
   chrome_url_overrides: {
     newtab: 'src/newtab/index.html',
   },
@@ -31,6 +27,10 @@ const manifest: ManifestType = {
       matches: [],
     },
   ],
+  side_panel: {
+    default_path: 'src/sidepanel/index.html',
+  },
+  permissions: ['storage', 'activeTab', 'sidePanel'],
 };
 
 export default manifest;

@@ -1,1 +1,3 @@
-console.log('background loaded');
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+});

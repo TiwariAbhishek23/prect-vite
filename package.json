@@ -1,8 +1,7 @@
 {
-  "name": "chrome-extension-template-preact-vite",
+  "name": "quick-type",
   "version": "0.0.1",
-  "description": "Chrome extension template with Preact, Tailwind CSS, Vite and Typescript preconfigured.",
-  "license": "MIT",
+  "description": "Quick Type is the best chrome extension",
   "repository": {
     "type": "git",
     "url": "https://github.com/fell-lucas/chrome-extension-template-preact-vite.git"
@@ -87,5 +86,16 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "firebase": "^11.3.1",
+    "framer-motion": "^12.4.7",
+    "lucide-preact": "^0.475.0",
+    "preact-iso": "^2.9.0",
+    "radix-ui": "^1.1.3",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^7.2.0",
+    "tailwind-merge": "^3.0.1"
   }
 }
